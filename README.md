@@ -1,69 +1,73 @@
 # Jarvis Assistant
-Jarvis is a voice controlled personal assistant for Windows, built in Python. It is designed to be practical, responsive, and easy to use, combining offline wake word detection, online speech recognition, and AI powered features to help with everyday tasks on your PC.
+Jarvis is a voice controlled personal assistant for Windows, built in Python. It is designed to be practical, responsive and easy to use, combining offline wake word detection, online speech recognition and AI powered features to help with everyday tasks on your PC.
+
 Jarvis focuses on being:
-•	Lightweight: minimal UI, small on screen widget, voice first interaction
-•	Practical: controls system settings, opens apps, searches YouTube
-•	Extendable: AI features such as email writing and reminders using Phi 3
+- Lightweight: Minimal UI, small on-screen widget, voice first interaction.
+- Practical: Controls system settings, opens apps, searches YouTube.
+- Extendable: AI features such as email writing and reminders using Phi 3.
 
 ## Features
 
 ### 1. Speech System
-- Offline Wake Word Detection (Vosk) Jarvis listens for a wake word locally using the Vosk engine, ensuring activation happens without sending continuous audio to the cloud.
-- Online Command Recognition (Google STT) After activation, Jarvis uses Google Speech to Text for accurate command recognition.
+- Offline Wake Word Detection (Vosk): Jarvis listens for a wake word locally using the Vosk engine, ensuring activation happens without sending continuous audio to the cloud.
+- Online Command Recognition (Google STT): After activation, Jarvis uses Google Speech to Text for accurate command recognition.
 
 ### 2. AI Powered Features (Phi 3 via Ollama)
-#### AI Email (ai_email)
+#### AI Email (ai-email)
 - You speak the content of the email.
 - Jarvis rewrites it into a short, clear, polite email using Phi 3.
-- The final email is spoken back and displayed.
+- The final email is displayed.
 
-#### AI Reminder (ai_reminder)
+#### AI Reminder (ai-reminder)
 - You say what you want to remember.
 - Jarvis saves the reminder to a simple reminders.txt file.
 - Confirms the reminder is stored.
+
 (Weather AI was tested earlier but is not part of the current build.)
 
 ### 3. System Controls
 
 #### Volume
-- Set specific levels: “set volume to 30”
-- Basic controls: “volume up”, “volume down”, “mute”
+- Set specific levels: "set volume to 30 or volume to any specific level".
+- Basic controls: "volume up", "volume down", "mute".
 
 #### Brightness
-- Set specific levels: “set brightness to 50”
-- Basic controls: “brightness up”, “brightness down”
+- Set specific levels: "set brightness to 50 or brightness to any specific level".
+- Basic controls: "brightness up", "brightness down".
 
 #### Power
-- “shutdown”
-- “restart”
-- “lock”
+- "shutdown"
+- "restart"
+- "lock"
 
 ### 4. Application & Browser Control
 
 #### Open Apps
-- “open notepad”
-- “open chrome”
-- “open edge”
-- “open youtube”
-- “open settings”
-- “open task manager”
+- open notepad
+- open chrome
+- open edge
+- open youtube
+- open settings
+- open task manager
 
 #### Close Apps
-- “close chrome”
-- “close edge”
-- “close youtube”
-- “close settings”
-- “close task manager”
+- close notepad
+- close chrome
+- close edge
+- close youtube
+- close settings
+- close task manager
 
 ### 5. YouTube Integration
 
 #### Search
-- “search funny cat videos on youtube”
-- “search song by [artist]”
+- search funny cat videos on youtube.
+- search song by [artist].
 
 #### Play
-- “play [song] on youtube”
-- “play [song] song on youtube”
+- play [song] on youtube.
+- play [song] song on youtube.
+
 Jarvis uses the browser to open YouTube with the requested search or video.
 
 ### 6. On Screen Widget
@@ -76,30 +80,30 @@ A small Tkinter widget provides:
 
 ### Core Components
 #### 1. Speech Recognition:
-- Vosk — offline wake word detection
-- Google STT — command recognition
+- Vosk - offline wake word detection
+- Google STT - command recognition
 
 #### 2. Audio I/O:
-- PyAudio — microphone input
-- pyttsx3 — text to speech output
+- PyAudio - microphone input
+- pyttsx3 - text to speech output
 
 #### 3. System Control:
-- ctypes, WMI, OS — volume, brightness, power, app control
+- ctypes, WMI, OS - volume, brightness, power, app control
 
 #### 4. UI:
-- Tkinter — lightweight widget
+- Tkinter - lightweight widget
 
 #### 5. AI:
-- Phi 3 via Ollama — email writing and reminders
+- Phi 3 via Ollama - email writing and reminders
 
 ## Main Flow
 1.	Wake Word Listening (Vosk): Jarvis continuously listens for a specific wake word.
 2.	Activation When detected, Jarvis plays a prompt and begins listening for a command.
-3.	Command Processing (process_command): The recognized text is analysed to determine whether it is:
+3.	Command Processing (process-command): The recognized text is analysed to determine whether it is:
 - an AI command (email, reminder)
 - a system command (volume, brightness, power)
 - an app or YouTube command or something else
-4.	Execution: Jarvis runs the appropriate function (e.g., set_volume, open_chrome, ai_email) and provides spoken and visual feedback.
+4.	Execution: Jarvis runs the appropriate function (e.g., set-volume, open-chrome, ai-email) and provides spoken and visual feedback.
 
 ## Key Functions
 ### process_command(command)
@@ -110,12 +114,12 @@ A small Tkinter widget provides:
 - AI email and reminders
 - Fallback responses
 
-### ai_email()
+### ai-email
 - Prompts for email content
 - Converts spoken text into a polished email using Phi 3
 - Speaks and displays the result
 
-### ai_reminder()
+### ai-reminder
 - Prompts for reminder
 - Saves reminder to file
 - Confirms completion
@@ -134,13 +138,14 @@ A small Tkinter widget provides:
 5. Improved error handling
 6. Customisable wake word and commands
 7. Optional weather integration (stable version)
+
 8. A major upcoming milestone for this project is the integration of Jarvis with Cyber Shield X, a cybersecurity analysis tool. The goal is to allow Jarvis to run, manage and interpret Cyber Shield X scans through voice commands, creating a unified AI powered security assistant.
 This integration will enable:
 - Voice activated cybersecurity scans.
 - Automated analysis by Cyber Shield X.
 - Real time risk explanations in simple language by Jarvis.
 - A single assistant capable of both productivity and security tasks.
-##### (This combined system is part of the long term commercial vision for Jarvis.)
+##### (This combined system is part of the long term commercial vision for Jarvis)
 
 
 ## Development Status
