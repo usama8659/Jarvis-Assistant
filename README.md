@@ -23,7 +23,7 @@ Jarvis focuses on being:
 - Jarvis saves the reminder to a simple reminders.txt file.
 - Confirms the reminder is stored.
 
-(Weather AI was tested earlier but is not part of the current build.)
+(Weather AI is included and is currenlty active.)
 
 ### 3. System Controls
 
@@ -51,7 +51,6 @@ Jarvis focuses on being:
 - open task manager
 
 #### Close Apps
-- close notepad
 - close chrome
 - close edge
 - close youtube
@@ -117,7 +116,7 @@ A small Tkinter widget provides:
 ### ai-email
 - Prompts for email content
 - Converts spoken text into a polished email using Phi 3
-- Speaks and displays the result
+- Displays the final written email.
 
 ### ai-reminder
 - Prompts for reminder
