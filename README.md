@@ -98,7 +98,8 @@ A small Tkinter widget provides:
 
 #### 5. AI:
 - Phi 3 via Ollama - email writing and reminders
-- External Weather API (Open‑Meteo) - live weather for any city
+
+#### 6. External Weather API (Open‑Meteo) - live weather for any city
 
 ## Main Flow
 1.	Wake Word Listening (Vosk): Jarvis continuously listens for a specific wake word.
