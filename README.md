@@ -82,19 +82,19 @@ A small Tkinter widget provides:
 ## Jarvis in Action
 
 ### Wake Word Detection
-![Wake Word Detection](Screenshots/kiyLmBbMLEkfDU9tYBYmu.png)
+![Wake Word Detection](Screenshots/Run-Jarvis.png)
 
 ### Jarvis Activation and Widget
-![Jarvis Widget](Screenshots/k3nzUYcezEUZsefc6fRXD.png)
+![Jarvis Widget](Screenshots/Jarvis-activation and Widget.png)
 
 ### AI-Email Generation
-![AI Email](Screenshots/LCiG8WxpfZxfXYAtoFHMZ.png)
+![AI Email](Screenshots/AI-email.png)
 
 ### AI-Reminder
-![AI Reminder](Screenshots/e3uAeqdfbvfJExng8bu6F.png)
+![AI Reminder](Screenshots/AI-reminder.png)
 
 ### AI-Weather
-![AI Weather](Screenshots/ing6p8Xsh5gVzisK9cW5i.png)
+![AI Weather](Screenshots/AI-weather.png)
 
 
 ## Architecture Overview
