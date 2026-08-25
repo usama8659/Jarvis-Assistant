@@ -98,6 +98,7 @@ A small Tkinter widget provides:
 
 #### 5. AI:
 - Phi 3 via Ollama - email writing and reminders
+- External Weather API (Open‑Meteo) - live weather for any city
 
 ## Main Flow
 1.	Wake Word Listening (Vosk): Jarvis continuously listens for a specific wake word.
@@ -130,19 +131,14 @@ A small Tkinter widget provides:
 ## Design Goals
 - Practical First: Focused on real everyday tasks rather than flashy features.
 - Simple to Understand: Clear command structure, readable functions, minimal UI.
-- Easy to Extend: New AI features (explain, summarise, translate) can be added by creating new ai_* functions and updating process_command.
+- Easy to Extend: New AI features (explain, summarise, translate) can be added by creating new AI functions and updating process-command.
 
 ## Future Improvements
 ### Planned enhancements include:
-1. Additional AI modes:
-2. Explain concepts
-3. Summarise text
-4. Rewrite content in different tones
-5. Improved error handling
-6. Customisable wake word and commands
-7. Optional weather integration (stable version)
+1. Additional AI modes to explain concepts, summarise text, rewrite content in different tones, improved error handling, customisable wake word and commands and enhanced weather features (forecasts, alerts, default city).
+2. Jarvis will also get more system controls, such as managing windows, checking network and battery status, turning Wi‑Fi or Bluetooth on and off, taking screenshots, handling files and folders and more.
 
-8. A major upcoming milestone for this project is the integration of Jarvis with Cyber Shield X, a cybersecurity analysis tool. The goal is to allow Jarvis to run, manage and interpret Cyber Shield X scans through voice commands, creating a unified AI powered security assistant.
+3. A major upcoming milestone for this project is the integration of Jarvis with Cyber Shield X, a cybersecurity analysis tool. The goal is to allow Jarvis to run, manage and interpret Cyber Shield X scans through voice commands, creating a unified AI powered security assistant.
 This integration will enable:
 - Voice activated cybersecurity scans.
 - Automated analysis by Cyber Shield X.
