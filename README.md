@@ -79,6 +79,24 @@ A small Tkinter widget provides:
 - Simple controls
 - A minimal interface without a full application window
 
+## Jarvis in Action
+
+### Wake Word Detection
+![Wake Word Detection](Screenshots/kiyLmBbMLEkfDU9tYBYmu.png)
+
+### Jarvis Activation and Widget
+![Jarvis Widget](Screenshots/k3nzUYcezEUZsefc6fRXD.png)
+
+### AI-Email Generation
+![AI Email](Screenshots/LCiG8WxpfZxfXYAtoFHMZ.png)
+
+### AI-Reminder
+![AI Reminder](Screenshots/e3uAeqdfbvfJExng8bu6F.png)
+
+### AI-Weather
+![AI Weather](Screenshots/ing6p8Xsh5gVzisK9cW5i.png)
+
+
 ## Architecture Overview
 
 ### Core Components
