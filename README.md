@@ -99,13 +99,14 @@ A small Tkinter widget provides:
 #### 5. AI:
 - Phi 3 via Ollama - email writing and reminders
 
-#### 6. External Weather API (Open‑Meteo) - live weather for any city
+#### 6. External Weather API (Open‑Meteo)
+- live weather for any city
 
 ## Main Flow
 1.	Wake Word Listening (Vosk): Jarvis continuously listens for a specific wake word.
 2.	Activation When detected, Jarvis plays a prompt and begins listening for a command.
 3.	Command Processing (process-command): The recognized text is analysed to determine whether it is:
-- an AI command (email, reminder)
+- an AI command (email, reminder, weather)
 - a system command (volume, brightness, power)
 - an app or YouTube command or something else
 4.	Execution: Jarvis runs the appropriate function (e.g., set-volume, open-chrome, ai-email) and provides spoken and visual feedback.
