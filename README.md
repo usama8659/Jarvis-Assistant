@@ -23,7 +23,11 @@ Jarvis focuses on being:
 - Jarvis saves the reminder to a simple reminders.txt file.
 - Confirms the reminder is stored.
 
-(Weather AI is included and is currenlty active.)
+#### Weather (ai-weather)
+
+- You ask for the weather.
+- Jarvis asks which city it should check.
+- It fetches live temperature and conditions in degrees Celsius for the requested city and displays the result, then confirms that the weather has been generated.
 
 ### 3. System Controls
 
@@ -106,7 +110,7 @@ A small Tkinter widget provides:
 
 ## Key Functions
 ### process_command(command)
-### Central command router that handles:
+#### Central command router that handles:
 - System controls
 - App open/close
 - YouTube search/play
