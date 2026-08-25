@@ -85,7 +85,7 @@ A small Tkinter widget provides:
 ![Wake Word Detection](Screenshots/Run-Jarvis.png)
 
 ### Jarvis Activation and Widget
-![Jarvis Widget](Screenshots/Jarvis-activation and Widget.png)
+![Jarvis Widget](Screenshots/Jarvis-activation.png)
 
 ### AI-Email Generation
 ![AI Email](Screenshots/AI-email.png)
