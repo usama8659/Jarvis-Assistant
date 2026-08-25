@@ -109,7 +109,7 @@ A small Tkinter widget provides:
 - an AI command (email, reminder, weather)
 - a system command (volume, brightness, power)
 - an app or YouTube command or something else
-4.	Execution: Jarvis runs the appropriate function (e.g., set-volume, open-chrome, ai-email) and provides spoken and visual feedback.
+4.	Execution: Jarvis runs the appropriate function (e.g., set-volume, open-chrome, ai-email) and provides visual feedback.
 
 ## Key Functions
 ### process_command(command)
