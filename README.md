@@ -83,6 +83,9 @@ A small Tkinter widget provides:
 
 ### Wake Word Detection
 ![Wake Word Detection](Screenshots/Run-Jarvis.png)
+<p align="center">
+  <img src="Screenshots/Run-Jarvis.png" width="600"></p>
+
 
 ### Jarvis Activation and Widget
 ![Jarvis Widget](Screenshots/Jarvis-Widget.png)
