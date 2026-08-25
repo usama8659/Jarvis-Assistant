@@ -99,25 +99,24 @@ A small Tkinter widget provides:
 
 ## Architecture Overview
 
-### Core Components
-#### 1. Speech Recognition:
+### 1. Speech Recognition:
 - Vosk - offline wake word detection
 - Google STT - command recognition
 
-#### 2. Audio I/O:
+### 2. Audio I/O:
 - PyAudio - microphone input
 - pyttsx3 - text to speech output
 
-#### 3. System Control:
+### 3. System Control:
 - ctypes, WMI, OS - volume, brightness, power, app control
 
-#### 4. UI:
+### 4. UI:
 - Tkinter - lightweight widget
 
-#### 5. AI:
+### 5. AI:
 - Phi 3 via Ollama - email writing and reminders
 
-#### 6. External Weather API (Open‑Meteo)
+### 6. External Weather API (Open‑Meteo)
 - live weather for any city
 
 ## Main Flow
