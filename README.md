@@ -1,10 +1,10 @@
 # Jarvis Assistant
-Jarvis is a voice controlled personal assistant for Windows, built in Python. It is designed to be practical, responsive and easy to use, combining offline wake word detection, online speech recognition and AI powered features to help with everyday tasks on your PC.
+Jarvis is a voice controlled personal assistant for Windows, built in Python. It is designed to be practical, responsive and easy to use, combining offline wake word detection, online speech recognition and AI powered features to help with everyday tasks on user's PC.
 
 Jarvis focuses on being:
-- Lightweight: Minimal UI, small on-screen widget, voice first interaction.
-- Practical: Controls system settings, opens apps, searches YouTube.
-- Extendable: AI features such as email writing and reminders using Phi 3.
+- Lightweight: Minimal UI, small on-screen widget and voice first interaction.
+- Practical: Controls system settings, opens apps and searches videos on YouTube.
+- Extendable: AI features such as email writing and reminders using Phi 3 and AI-weather forecasting using Open-Meteo.
 
 ## Features
 
@@ -12,31 +12,29 @@ Jarvis focuses on being:
 - Offline Wake Word Detection (Vosk): Jarvis listens for a wake word locally using the Vosk engine, ensuring activation happens without sending continuous audio to the cloud.
 - Online Command Recognition (Google STT): After activation, Jarvis uses Google Speech to Text for accurate command recognition.
 
-### 2. AI Powered Features (Phi 3 via Ollama)
-#### AI Email (ai-email)
+### 2. AI Powered Features (Phi 3 via Ollama and Open-Meteo)
+#### AI Email
 - You speak the content of the email.
-- Jarvis rewrites it into a short, clear, polite email using Phi 3.
+- Jarvis rewrites it into a short, clear and polite email using Phi 3.
 - The final email is displayed.
 
-#### AI Reminder (ai-reminder)
+#### AI Reminder
 - You say what you want to remember.
 - Jarvis saves the reminder to a simple reminders.txt file.
 - Confirms the reminder is stored.
 
-#### Weather (ai-weather)
-
+#### AI-Weather Forecasting
 - You ask for the weather.
 - Jarvis asks which city it should check.
 - It fetches live temperature and conditions in degrees Celsius for the requested city and displays the result, then confirms that the weather has been generated.
 
 ### 3. System Controls
-
 #### Volume
-- Set specific levels: "set volume to 30 or volume to any specific level".
-- Basic controls: "volume up", "volume down", "mute".
+- Set specific levels: "set volume to 30 or to any specific level".
+- Basic controls: "volume up", "volume down", "mute", "unmute".
 
 #### Brightness
-- Set specific levels: "set brightness to 50 or brightness to any specific level".
+- Set specific levels: "set brightness to 50 or to any specific level".
 - Basic controls: "brightness up", "brightness down".
 
 #### Power
@@ -64,7 +62,7 @@ Jarvis focuses on being:
 ### 5. YouTube Integration
 
 #### Search
-- search funny cat videos on youtube.
+- search funny cat videos on youtube or any other video.
 - search song by [artist].
 
 #### Play
@@ -75,9 +73,9 @@ Jarvis uses the browser to open YouTube with the requested search or video.
 
 ### 6. On Screen Widget
 A small Tkinter widget provides:
-- Quick visual feedback
-- Simple controls
-- A minimal interface without a full application window
+- Quick visual feedback.
+- Simple controls.
+- A minimal interface without a full application window.
 
 ## Jarvis in Action
 
@@ -100,56 +98,61 @@ A small Tkinter widget provides:
 ## Architecture Overview
 
 ### 1. Speech Recognition:
-- Vosk - offline wake word detection
-- Google STT - command recognition
+- Vosk: Offline wake word detection.
+- Google STT: Command recognition.
 
 ### 2. Audio I/O:
-- PyAudio - microphone input
-- pyttsx3 - text to speech output
+- PyAudio: Microphone input.
+- pyttsx3: Text to speech output.
 
 ### 3. System Control:
-- ctypes, WMI, OS - volume, brightness, power, app control
+- ctypes, WMI, OS - volume, brightness, power, app control.
 
 ### 4. UI:
-- Tkinter - lightweight widget
+- Tkinter: Lightweight widget
 
 ### 5. AI:
-- Phi 3 via Ollama - email writing and reminders
+- Phi 3 via Ollama: Email writing and reminders.
 
 ### 6. External Weather API (Open‑Meteo)
-- live weather for any city
+- Live weather for any city.
 
 ## Main Flow
 1.	Wake Word Listening (Vosk): Jarvis continuously listens for a specific wake word.
 2.	Activation When detected, Jarvis plays a prompt and begins listening for a command.
-3.	Command Processing (process-command): The recognized text is analysed to determine whether it is:
-- an AI command (email, reminder, weather)
-- a system command (volume, brightness, power)
-- an app or YouTube command or something else
-4.	Execution: Jarvis runs the appropriate function (e.g., set-volume, open-chrome, ai-email) and provides visual feedback.
+3.	Command Processing: The recognized text is analysed to determine whether it is:
+- An AI command (email, reminder, weather).
+- A system command (volume, brightness, power).
+- An app or YouTube command or something else.
+4.	Execution: Jarvis runs the appropriate function (e.g., set-volume, open-chrome, AI-email) and provides visual feedback.
 
 ## Key Functions
-### process_command(command)
+### process-command
 #### Central command router that handles:
-- System controls
-- App open/close
-- YouTube search/play
-- AI email and reminders
-- Fallback responses
+- System controls.
+- App open/close.
+- YouTube search/play.
+- AI email, AI-reminders and AI-weather forecasting.
+- Fallback responses.
 
-### ai-email
-- Prompts for email content
-- Converts spoken text into a polished email using Phi 3
+### AI-Email
+- Prompts for email content.
+- Converts spoken text into a polished email using Phi 3.
 - Displays the final written email.
 
-### ai-reminder
-- Prompts for reminder
-- Saves reminder to file
-- Confirms completion
+### AI-Reminder
+- Prompts for reminder.
+- Saves reminder to file.
+- Confirms completion.
+
+### AI-Wetaher Forecasting
+- Prompts for weather.
+- Asks for city.
+- Displays weather forecast and then confirms that the weather has been generated.
 
 ## Design Goals
 - Practical First: Focused on real everyday tasks rather than flashy features.
-- Simple to Understand: Clear command structure, readable functions, minimal UI.
+- Simple to Understand: Clear command structure, readable functions and minimal UI.
 - Easy to Extend: New AI features (explain, summarise, translate) can be added by creating new AI functions and updating process-command.
 
 ## Future Improvements
